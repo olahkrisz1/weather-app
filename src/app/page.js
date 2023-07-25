@@ -12,7 +12,7 @@ export default function Home() {
   const [weather, setWeather] = useState({}) 
   const [loading, setLoading] = useState(false)
 
-  const url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=643ea4a08ab5b7c89bbc8d9ca131953e`
+  const url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.NEXT_PUBLIC_API_KEY}`
   
   const fetchWeather = (e) => {
     e.preventDefault()
